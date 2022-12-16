@@ -3,12 +3,14 @@ import useName from "../hooks/useName";
 import ButtonSection from "./ButtonSection";
 import { MyContext } from "../MyContext";
 import React, { useContext } from "react";
+import { Context } from "./Provider";
 
 export default function Main() {
-  const message = useContext(MyContext);
+  const { name } = useContext(Context);
+  
   return (
     <div className="mainWrapper">
-      <h1 className="name">{message}</h1>
+      <h1 className="name">{name}</h1>
       <p className="occupation">Fachinformatiker fuer Anwendungsentwicklung</p>
       <p className="link">github.com</p>
       <ButtonSection></ButtonSection>

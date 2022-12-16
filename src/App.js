@@ -6,9 +6,12 @@ import Footer from "./components/Footer";
 import ButtonSection from "./components/ButtonSection";
 import Portfolio from "./Portfolio";
 import { useState, useEffect } from "react";
+import { createContext } from "react";
 
+export const MyContext = createContext(null);
 export default function App() {
   //console.log(localStorage.getItem("api"));
+
   const [isLightMode, setLightMode] = useState(
     localStorage.getItem("isLightMode") || "false"
   );
